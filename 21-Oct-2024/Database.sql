@@ -17,6 +17,9 @@ Database : (DB)
 
 		-- Delete database Database_Name
 		Drop database Database_name
+
+		-- Example
+			Drop database ECommerce_DB1
 		
 		-- How we can switch between Two DB:
 			We have to use "Use" statement to switch between two diff DB.
@@ -25,4 +28,13 @@ Database : (DB)
 
 			-- Example
 				Use CrystalAndStone
+
+		-- Rename Database
+			-- Syntax
+				Alter database Existingdatabase_Name
+				modify name = new_databasename
+
+			-- Example
+				Alter database Ecommerce_DB
+				Modify name = E_Commerce_DB
 
