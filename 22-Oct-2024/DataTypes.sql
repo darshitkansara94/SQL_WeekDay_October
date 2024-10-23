@@ -45,9 +45,28 @@ DataTypes :
 					When we need to store numbers with more length than bigint is use.
 					i.e: Mobile number, Aadhar number.
 		Char :
-			
+			It is also storing a string values.
+			We need to give length of the char datatype.
+
+			-- Syntax:
+				char(n)
+
+			-- Example
+				char(10)
+
+				String = 'Hello     ' -- Length = 5
+				String  = 'Darshit   ' --Length = 7
 		Double :
-			
+			Double is consider as a float datatype.
+			Double is hold value with point just like decimal.
+
+			-- Syntax
+				float(n)
+
+			-- Example :
+				v1 = 15.32
+				double = 15.21458752
+
 		Decimal :
 			Contains value with the point.
 
