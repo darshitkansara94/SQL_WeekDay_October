@@ -67,5 +67,37 @@ Table :
 				-- Example :
 					Exec sp_rename 'tbl_CategoryMaster.IsDeleted','Category_IsDeleted','Column'
 
+			-- Add new column :
+				When user wants to add a new column into existing table.
 
+				-- Syntax :
+					Alter table tbl_name
+					Add column_name datatype
 
+				-- Example
+					Alter table tbl_CategoryMaster
+					Add Modified_Date Datetime
+			 -- Modify datatype
+				When user wants to modify datatype of existing column.
+
+				-- Syntax :
+					Alter table tbl_name
+					Alter column column_name datatype
+
+				-- Example
+					Alter table tbl_CategoryMaster
+					Alter column Category_IsDeleted int
+
+					Alter table tbl_CategoryMaster
+					Alter column Category_IsDeleted bit
+
+			-- Delete column from table
+				To remove existing column from the table
+
+				-- Syntax
+					Alter table tbl_Name
+					Drop column column_name
+
+				-- Example
+					Alter table [dbo].[tbl_CategoryMaster]
+					Drop column Modified_Date
