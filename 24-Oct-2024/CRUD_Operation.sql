@@ -48,4 +48,27 @@ Insert (Create) :
 				-- Example
 					Insert into tbl_CategoryMaster(Category_Id,Category_Name)
 					values(3,'AC'),(4,'TV'),(5,'Fridge')
-	
+
+Update :
+	When we need to modify the existing data.
+	It can be multiple or single data.
+
+	-- Syntax :
+		Update tbl_Name set
+			column1 = newvalue, column2 = newvalue....columnN = newvalue
+
+	-- Example :
+		Select * from tbl_CategoryMaster
+
+		Update tbl_CategoryMaster set
+			Category_CreatedDate = '2024-10-29 08:44:01.690'
+
+-- Delete :	
+	Delete record from the existing table
+	There is no data recover after delete execution.
+
+	-- Syntax :
+		Delete from tbl_name
+
+	-- Example :
+		Delete from tbl_CategoryMaster
