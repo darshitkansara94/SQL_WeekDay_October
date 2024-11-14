@@ -103,8 +103,62 @@ System Defined Function
 					--   Darshit Kansara
 
 			ltrim
+				Remove whitespace from left side.
+				
+				-- Syntax :
+					Select ltrim(string) from tablename
 			trim
+				Remove whitespace from left side and right side
+
+				-- Syntax
+					Select TRIM(string) from tablename
+
+			-- Apply ltrim,rtrim and trim function on table				
+
+				Select LTRIM(Category_Name) as ltrimName,
+					RTRIM(Category_Name) as rtrimname,
+					TRIM(Category_Name) as trimname,
+					LEN(Category_Name) as lengthName
+				from tbl_CategoryMaster
+				-- Output
+					--ltrim = 'Television   '
+					--rtrim = '   Television'
+					--trim = 'Television'
 			replace
+				Replace single char or word in existing string.
+
+				-- Syntax 
+					Select REPLACE(expression,expression_to_search,expression_to_replace)
+
+				-- Example
+					Select REPLACE('Hello','l','o') as newstring
+
+					-- Replace word
+					Select REPLACE('Hello World',UPPER('hello'),UPPER('Bye')) as newstring
+
+					Select REPLACE(Category_Name,'a','b') as replacedstring, Category_Name 
+					from tbl_CategoryMaster
+
+					Select REPLACE(Category_Name,Category_Name,TRIM(Category_Name)) as replacedstring, Category_Name 
+					from tbl_CategoryMaster
+
+					-- Update value in db
+					Update tbl_CategoryMaster 
+						set Category_Name = REPLACE(Category_Name,Category_Name,TRIM(Category_Name))
+
+					Select * from tbl_CategoryMaster										
+
+
 			charindex
+			Left
+			right
+			reverse
+			substring
+
+-- multiple Concat function in single select statement
+	Select CONCAT(Reg_FirstName,Reg_MiddleName,Reg_LastName) as WithConcat,
+	Reg_FirstName + Reg_MiddleName + Reg_LastName as WithPlus,
+	CONCAT_WS(' ',Reg_FirstName,Reg_MiddleName,Reg_LastName) as WithSeperator
+	from tbl_RegisterUser
 			
 	Date function
