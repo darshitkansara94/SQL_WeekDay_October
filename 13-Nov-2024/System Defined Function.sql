@@ -150,15 +150,55 @@ System Defined Function
 
 
 			charindex
+				Identify the index for character
+
+				-- Syntax
+					Select CHARINDEX('char_to_find_index','string value')
+
+				-- Example :
+					 Select charindex(' ','text string')
+
 			Left
-			right
+				Traverse string from left to right.
+				
+				-- Syntax :
+					Select Left('string Value',Char_count)
+
+				-- Example :
+					Select Left('Test String',3)
+					Select Left('Test String',5)
+
+			right :
+				Traverse string from right to left.
+
+				-- Syntax :
+					Select RIGHT('String value', char_count)
+
+				-- Example :
+					Select Right('Test String',3) -- ing / gni ?
+					Select Right('Test String',5) 
+
+				
 			reverse
-			substring
+				Return a string in reverse order.
+
+				-- Sytnax :
+					Select REVERSE('String value')
+
+				-- Example :
+					Select REVERSE('WelTec is Institute')
+			substring :
+				Extract the char from string.
+				We can assign index / starting point of the string to retrieve.
+
+				-- Syntax :
+					Select SUBSTRING('Srting',string_index, no_of_char)
+
+				-- Example :
+					Select SUBSTRING('WelTec Institute',2, 3)
 
 -- multiple Concat function in single select statement
 	Select CONCAT(Reg_FirstName,Reg_MiddleName,Reg_LastName) as WithConcat,
 	Reg_FirstName + Reg_MiddleName + Reg_LastName as WithPlus,
 	CONCAT_WS(' ',Reg_FirstName,Reg_MiddleName,Reg_LastName) as WithSeperator
 	from tbl_RegisterUser
-			
-	Date function
