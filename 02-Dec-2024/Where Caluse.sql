@@ -55,3 +55,9 @@ Where Clause :
 				Select Category_Id,Category_Name,Created_Date,IsDeleted 
 					from tbl_CategoryMaster
 				Where Category_Name = 'Fridge' OR Category_Id = 3
+
+				-- Use And and Or operator in single select statement.
+				Select Category_Id,Category_Name,Created_Date,IsDeleted 
+					from tbl_CategoryMaster
+				Where 
+					(Category_Name = 'AC' or Category_Name = 'Tablet') And Category_Id = 3
