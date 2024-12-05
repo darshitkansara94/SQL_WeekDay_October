@@ -60,7 +60,4 @@ Joins :
 			from tbl_CategoryMaster
 			Right join tbl_SubcategoryMaster on 
 				tbl_SubcategoryMaster.Category_Id = tbl_CategoryMaster.Category_Id
-			Where Category_Name = 'AC'
-
-	-- Self Join
-	-- Outer join
+			Where Category_Name = 'AC'	
