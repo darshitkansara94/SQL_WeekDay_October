@@ -156,5 +156,21 @@ SQL Operator :
 				where 
 					exists (Select Category_Name from tbl_CategoryMaster where Category_Name = 'PC')
 
-		Not
-		Any
+		Not :
+			Not is display record which is not True.
+
+			-- Example :
+				Select * from tbl_CategoryMaster
+
+				Select * from tbl_CategoryMaster
+				where Category_Id not between 1 And 4
+
+				-- In Operator
+				Select * from tbl_CategoryMaster
+				where Category_Id not in (1,2,4)
+
+				-- Like operator
+				Select * from tbl_CategoryMaster
+				Where Category_Name not like 'm%'
+				
+		
